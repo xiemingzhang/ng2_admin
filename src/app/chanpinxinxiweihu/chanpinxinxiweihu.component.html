@@ -1,0 +1,215 @@
+<div class="right_col" role="main">
+<div class="">
+    <div class="page-title">
+        <div class="title_left">
+            <h3>
+                产品信息维护
+            </h3>
+        </div>
+
+    </div>
+
+    <div class="x_panel">
+
+        <div class="x_content">
+
+            <div class="row">
+                <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12">作物种类<span style="color:red;margin-left:5px;">*</span></label>
+                    <div class="col-md-9 col-sm-9 col-xs-12">
+                        <select class="form-control xxx" id="productTypeCode" name="productTypeCode" [(ngModel)]="item.type">
+                        <option value="" selected="selected">-请选择-</option>
+                            <option value="01">玉米</option>
+                            <option value="02">稻</option>
+                            <option value="03">大豆</option>
+                            <option value="04">马铃薯</option>
+                            <option value="05">西葫芦</option>
+                            <option value="06">向日葵</option>
+                            <option value="07">棉花</option>
+                            <option value="08">小麦</option>
+                            <option value="09">蔬菜</option>
+                            <option value="10">蚕豆</option>
+                            <option value="11">青稞</option>
+                            <option value="12">甘薯</option>
+                            <option value="13">高粱</option>
+                            <option value="14">豌豆</option>
+                            <option value="15">油菜</option>
+                            <option value="16">花生</option>
+                            <option value="17">胡麻</option>
+                            <option value="18">甘蔗</option>
+                            <option value="19">甜菜</option>
+                            <option value="20">大白菜</option>
+                            <option value="21">西瓜</option>
+                            <option value="22">辣椒</option>
+                            <option value="23">甜瓜</option>
+                            <option value="24">茎瘤芥</option>
+                            <option value="25">南瓜</option>
+                            <option value="26">丝瓜</option>
+                            <option value="27">茄子</option>
+                            <option value="28">苦瓜</option>
+                            <option value="29">黄瓜</option>
+                            <option value="30">砧木</option>
+                            <option value="31">豆角</option>
+                            <option value="32">西红柿</option>
+                            <option value="33">谷子</option>
+                            <option value="34">芝麻</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12">品种名称</label>
+                    <div class="col-md-9 col-sm-9 col-xs-12">
+                        <input name="variety " id="variety" placeholder="" maxlength="50" class="form-control xxx" type="text" [(ngModel)]="item.name">
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12">拼音码</label>
+                    <div class="col-md-9 col-sm-9 col-xs-12">
+                        <input name="pinYinCode" id="pinYinCode" value="拼音码" maxlength="50" class="form-control xxx" type="text">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12">种子类别</label>
+                    <div class="col-md-9 col-sm-9 col-xs-12">
+                        <input name="seedclasses" id="seedclasses" placeholder="" maxlength="50" class="form-control xxx" type="text" 
+                        [(ngModel)]="item.clz">
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12">种子生产经营者名称</label>
+                    <div class="col-md-9 col-sm-9 col-xs-12">
+                        <input name="seedoperator" id="seedoperator" placeholder="" maxlength="50" class="form-control xxx" type="text"
+                        [(ngModel)]="item.org">
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12">种子生产经营许可证编号</label>
+                    <div class="col-md-9 col-sm-9 col-xs-12">
+                        <input name="seedpermitnum" id="seedpermitnum" placeholder="" maxlength="50" class="form-control xxx" type="text"
+                        [(ngModel)]="item.licnum">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12">质量指标</label>
+                    <div class="col-md-9 col-sm-9 col-xs-12">
+                        <input name="qualityindex" id="qualityindex" placeholder="" maxlength="50" class="form-control xxx" type="text"
+                        [(ngModel)]="item.quailty">
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12">净含量</label>
+                    <div class="col-md-9 col-sm-9 col-xs-12">
+                        <input name="netweight" id="netweight" placeholder="" maxlength="50" class="form-control xxx" type="text"
+                        [(ngModel)]="item.netwt">
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12">品种适应种植区域</label>
+                    <div class="col-md-9 col-sm-9 col-xs-12">
+                        <input name="plantingarea" id="plantingarea" placeholder="" maxlength="150" class="form-control xxx" type="text" value="适宜于湖南省稻瘟病轻发区作一季晚稻种植。">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12">种植季节</label>
+                    <div class="col-md-9 col-sm-9 col-xs-12">
+                        <input name="plantingseason" id="plantingseason" placeholder="" maxlength="50" class="form-control xxx" type="text">
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12">检疫证明编号</label>
+                    <div class="col-md-9 col-sm-9 col-xs-12">
+                        <input name="jianyizzhengming" id="jianyizzhengming" placeholder="" maxlength="50" class="form-control xxx" type="text">
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12">审定编号</label>
+                    <div class="col-md-9 col-sm-9 col-xs-12">
+                        <input name="shengdingnum" id="shengdingnum" placeholder="" maxlength="50" class="form-control xxx" type="text"
+                        [(ngModel)]="item.appronum">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12">审定年份</label>
+                    <div class="col-md-9 col-sm-9 col-xs-12">
+                        <input name="shengdinyear" id="shengdinyear" placeholder="" maxlength="50" class="form-control xxx" type="date"
+                        [(ngModel)]="item.approyear">
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12">起始年份</label>
+                    <div class="col-md-9 col-sm-9 col-xs-12">
+                        <input name="startyear" id="startyear" placeholder="" maxlength="50" class="form-control xxx" type="date"
+                        [(ngModel)]="item.startyear">
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12">结束年份</label>
+                    <div class="col-md-9 col-sm-9 col-xs-12">
+                        <input name="endyear" id="endyear" placeholder="" maxlength="50" class="form-control xxx" type="date"
+                        [(ngModel)]="item.endyear">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 col-sm-12 col-xs-12 form-group xiugai_7">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12 xiugai_6">品种简介</label>
+                    <div class="col-md-9 col-sm-9 col-xs-12 dingwei">
+                        <richtextPZJJ></richtextPZJJ>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-12 col-xs-12 form-group xiugai_7">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12 xiugai_6">特征特性</label>
+                    <div class="col-md-9 col-sm-9 col-xs-12 dingwei">
+                        <richtextTZTX></richtextTZTX> 
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-12 col-xs-12 form-group xiugai_7">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12 xiugai_6">产量表现</label>
+                    <div class="col-md-9 col-sm-9 col-xs-12 dingwei">
+                        <richtextCLBX></richtextCLBX>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-12 col-xs-12 form-group xiugai_7">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12 xiugai_6">栽培要点</label>
+                    <div class="col-md-9 col-sm-9 col-xs-12 dingwei">
+                        <richtextZPYD></richtextZPYD>
+                    </div>
+                </div>
+            </div>
+             <div class="row">
+            <div class="col-md-4 col-sm-12 col-xs-12 form-group xiugai_7">
+                <label class="control-label col-md-3 col-sm-3 col-xs-12 xiugai_6">品种照片</label>
+                <div class="col-md-9 col-sm-9 col-xs-12   kv-main  ">
+                       <fileinputPZZP></fileinputPZZP>
+                </div>
+            </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+                    <button type="button"  class="btn btn-primary btnAddProduct" on-click="add(this.item)">增加</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

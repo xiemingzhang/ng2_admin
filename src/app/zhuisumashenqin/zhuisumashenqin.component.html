@@ -1,0 +1,124 @@
+<div class="right_col" role="main">
+    <div class="">
+        <div class="page-title">
+            <div class="title_left">
+                <h3>
+        单元识别代码申请
+    </h3>
+            </div>
+        </div>
+        <div class="x_panel">
+            <div class="x_content">
+                <div class="row">
+                    <input type="hidden" id="sendCertificateOrgCode" value="11">
+                    <input type="hidden" id="enterpriseCode" value="3">                        
+                    <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">作物名称</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                         <select  class="form-control productCode">
+                            <option value="">-请选择-</option>
+                        </select>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">品种名称</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                           <select class="form-control productTypeCode"  name="productTypeCode" onchange="/*javascript:changeProducts(this.value);*/">
+                                        <option value="">-请选择-</option>
+                                        <option value="01">玉米</option>
+                                        <option value="02">稻</option>
+                                        <option value="03">大豆</option>
+                                        <option value="04">马铃薯</option>
+                                        <option value="05">西葫芦</option>
+                                        <option value="06">向日葵</option>
+                                        <option value="07">棉花</option>
+                                        <option value="08">小麦</option>
+                                        <option value="09">蔬菜</option>
+                                        <option value="10">蚕豆</option>
+                                        <option value="11">青稞</option>
+                                        <option value="12">甘薯</option>
+                                        <option value="13">高粱</option>
+                                        <option value="14">豌豆</option>
+                                        <option value="15">油菜</option>
+                                        <option value="16">花生</option>
+                                        <option value="17">胡麻</option>
+                                        <option value="18">甘蔗</option>
+                                        <option value="19">甜菜</option>
+                                        <option value="20">大白菜</option>
+                                        <option value="21">西瓜</option>
+                                        <option value="22">辣椒</option>
+                                        <option value="23">甜瓜</option>
+                                        <option value="24">茎瘤芥</option>
+                                        <option value="25">南瓜</option>
+                                        <option value="26">丝瓜</option>
+                                        <option value="27">茄子</option>
+                                        <option value="28">苦瓜</option>
+                                        <option value="29">黄瓜</option>
+                                        <option value="30">砧木</option>
+                                        <option value="31">豆角</option>
+                                        <option value="32">西红柿</option>
+                                        <option value="33">谷子</option>
+                                        <option value="34">芝麻</option>
+                                        </select>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">大包装数量</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                            <input name="bignum" maxlength="10" class="form-control xxx inputfile" type="text" value="大包装数量">
+<!--                         <input type="text" class="form-control xiugai_2" id="input_pinzhongzp" onchange="document.getElementsByClassName('inputfile')[0].value=this.files[0].name.substring(0,this.files[0].name.lastIndexOf('.'));"> -->
+                        </div>
+                    </div>
+                </div>
+                
+            <div class="row">
+                <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12">小包装数量</label>
+                     <div class="col-md-9 col-sm-9 col-xs-12">
+                            <input name="smallnum" maxlength="10" class="form-control xxx inputfile" type="text" value="小包装数量">
+                    </div>
+                </div>
+                  <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+                     <button type="button" id="btnGenerateCode" class="btn btn-success">申请</button>
+                  </div>
+            </div>                  
+             
+        </div>
+        <div class="clearfix"></div>
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                    <div class="x_content">
+                        <table id="example" class="table table-striped responsive-utilities jambo_table bulk_action zhuisuxinxi">
+                            <thead>
+                                <tr class="headings">
+                                    <th>序号 </th>
+                                    <th>生产经营者名称 </th>
+                                    <th>追溯单号 </th>
+                                    <th>作物名称</th>
+                                    <th>品种名称 </th>
+                                    <th>申请日期 </th>
+                                    <th class=" no-link last"><span class="nobr">操作</span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="even pointer" *ngFor="let item of items;let i = index">
+                                    <td class=" ">{{i}}</td>
+                                    <td class=" ">{{item.orgname}}</td>
+                                    <td class=" ">{{item.ordernum}}</td>
+                                    <td class=" ">{{item.crop}}</td>
+                                    <td class=" ">{{item.type}}</td>
+                                    <td class=" ">{{item.appliyear}}</td>
+                                    <td class="a-right a-right "><a href="#">修改</a> <a href="#">复制</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <br />
+            <br />
+        </div>
+    </div>
+</div>

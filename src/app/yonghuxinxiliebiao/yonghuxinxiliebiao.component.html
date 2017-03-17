@@ -1,0 +1,152 @@
+<div class="right_col" role="main">
+ <div class="">
+  <div class="page-title">
+    <div class="title_left">
+      <h3>
+            用户信息列表
+        </h3>
+    </div>
+
+  </div>
+  <div class="clearfix"></div>
+
+  <div class="row">
+
+    <div class="col-md-12 col-sm-12 col-xs-12">
+      <div class="x_panel">
+        <div class="x_content">
+            <table  class="table table-striped responsive-utilities jambo_table bulk_action">
+            <thead>
+              <tr class="headings">
+                <th>角色 </th>
+                <th>用户名 </th>
+                <th>座机 </th>
+                <th>手机号 </th>
+                <th>部门 </th>
+                <th>状态</th>
+                <th>操作</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr class="even pointer">
+                <td class=" ">高级管理员</td>
+                <td class=" ">陈雪亮</td>
+                 <td class=" "></td>
+                 <td class=" ">13120057118</td>
+                <td class=" ">种子科</td>
+                <td class=" ">上线</td>
+                <td class=" "><a href="">修改</a> <a href="">删除</a></td>
+              </tr>
+              <tr class="even pointer">
+                  <td class=" ">管理员</td>
+                  <td class=" ">陈雪亮</td>
+                  <td class=" "></td>
+                  <td class=" ">13120057118</td>
+                  <td class=" ">种子科</td>
+                  <td class=" ">上线</td>
+                  <td class=" "><a href="">修改</a> <a href="">删除</a></td>
+              </tr>
+
+            </tbody>
+
+          </table>
+        </div>
+          <div class="row">
+              <div class="col-md-4 col-sm-4 col-xs-4 form-group pull-right xiugai_10">
+                  <button type="submit" class="btn btn-success" data-toggle="modal" data-target="#addnew">添加员工</button>
+              </div>
+          </div>
+          <div class="row" >
+              <div class="modal fade" id="addnew" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" ng-controller="AddStaffCtr">
+                      <div class="modal-content">
+                          <div class="modal-header">
+                              <h4 class="modal-title" id="openLabel">员工信息</h4>
+                          </div>
+                          <div class="modal-body">
+                              <form class="form-horizontal" id="addStaff" name="addStaff" ng-submit="submitForm()" >
+                                  <div class="form-group">
+                                      <label  class="col-sm-2 control-label">用户名</label>
+                                       <div class="col-sm-4">
+                                          <input type="text" class="form-control" placeholder="请输入用户名"
+                                          name="name"
+                                          ng-model="user.name"
+                                          ng-class="{'err':addStaff.name.$invalid && addStaff.name.$touched }"                      
+                                          ng-required="true"
+                                           >
+                                      </div>                                             
+                                      <div class="col-sm-6">
+                                          <span class="text-warning" ng-if="addStaff.name.$error.required 
+                                          && addStaff.name.$touched">用户名不能为空</span>
+                                      </div>                                           
+                                  </div>
+                                  <div class="form-group">
+                                      <label  class="col-sm-2 control-label"> 角 色  </label>
+                                      <div class="col-sm-4">
+                                          <select class="form-control">                                                     
+                                              <option value="1">管理员</option>
+                                              <option value="2">高级管理员</option>
+                                          </select>
+                                      </div>
+                                  </div>
+                                  <div class="form-group">
+                                      <label  class="col-sm-2 control-label">登录密码</label>
+                                      <div class="col-sm-4">
+                                          <input type="password" class="form-control error" placeholder="请输入密码" 
+                                                name="password"
+                                                ng-model="user.password"
+                                                ng-class="{'err':addStaff.password.$invalid && addStaff.password.$touched }"          
+                                                ng-minlength="8"                                   
+                                                ng-pattern="/^(?![a-zA-z]+$)(?!\d+$)(?![!@#$%^&*]+$)[a-zA-Z\d!@#$%^&*]+$/"
+                                                ng-required="true"
+                                                />
+                                      </div>
+                                      <div class="col-sm-6">
+                                          <span class="fa fa-check input_result"  ng-cloak  ng-if="addStaff.password.$valid && addStaff.password.$touched"></span>
+                                          <span class="text-warning" ng-if="
+                                          addStaff.password.$error.required && addStaff.password.$touched">密码不能为空</span>
+                                          <span class="text-warning" ng-if="
+                                          addStaff.password.$error.minlength && addStaff.password.$touched">密码长度至少8位</span>
+                                          <span class="text-warning" ng-if="
+                                          !addStaff.password.$error.minlength && addStaff.password.$error.pattern && addStaff.password.$touched">必须是字母，数字的组合</span>
+                                      </div>
+                                  </div>
+                                  <div class="form-group">
+                                      <label  class="col-sm-2 control-label">确认密码</label>
+                                      <div class="col-sm-4">
+                                          <input type="password" class="form-control" placeholder="请确认密码"  
+                                               name="confirmPassword"
+                                               ng-model="user.confirmPassword"
+                                               ng-class="{'err':addStaff.confirmPassword.$invalid && addStaff.confirmPassword.$touched }"
+                                               compare="user.password"
+                                               ng-required="true"
+                                                />
+                                      </div>
+                                      <div class="col-sm-6"> 
+                                           <span class="fa fa-check input_result"  ng-cloak  ng-if="addStaff.confirmPassword.$valid && addStaff.confirmPassword.$touched"></span>                                              
+                                          <span class="text-warning" ng-if="!addStaff.password.$invalid && addStaff.confirmPassword.$error.required && addStaff.confirmPassword.$touched">确认密码不能为空</span>
+                                          <span class="text-warning" ng-if="!addStaff.password.$invalid && !addStaff.confirmPassword.$error.required && addStaff.confirmPassword.$error.compare  && addStaff.confirmPassword.$touched">两次输入密码不一致</span>
+                                      </div>
+                                  </div>
+                                  <button id="dianjidaili" type="submit" class="btn btn-primary"  style="display:none;"></button>
+                                  <button id="dianjidaili2" type="button" class="btn btn-primary"  style="display:none;" ng-click="addStaff.$setPristine();addStaff.$setUntouched();"></button>
+                              </form>                                   
+                              <div class="clearfix"></div>
+                              </div>
+                          <div class="clearfix"></div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal" style="position: relative;top:3px;" onclick='
+                            $("#dianjidaili2").click();$("#addStaff")[0].reset();'>取消</button>
+                            <button type="button" class="btn btn-primary " data-dismiss="modal" ng-disabled="addStaff.$invalid" onclick='$("#dianjidaili").click();$("#addStaff")[0].reset();'>确定</button>  
+                            <div class="clearfix"></div>                                  
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

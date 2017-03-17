@@ -1,0 +1,210 @@
+<div class="right_col" role="main">
+    <div class="">
+        <div class="page-title">
+            <div class="title_left">
+                <h3>
+                    企业信息维护
+                </h3>
+            </div>
+        </div>
+        <div class="x_panel">
+            <div class="x_content">
+                <div class="row">
+                    <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">发证机关</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                            <select class="form-control xxx" id="provinceList" name="provinceList"><option value="">-请选择-</option>
+                                <option selected="selected" value="11">北京市</option>
+                                <option value="12">天津市</option>
+                                <option value="13">河北省</option>
+                                <option value="14">山西省</option>
+                                <option value="15">内蒙古自治区</option>
+                                <option value="21">辽宁省</option>
+                                <option value="22">吉林省</option>
+                                <option value="23">黑龙江省</option>
+                                <option value="31">上海市</option>
+                                <option value="32">江苏省</option>
+                                <option value="33">浙江省</option>
+                                <option value="34">安徽省</option>
+                                <option value="35">福建省</option>
+                                <option value="36">江西省</option>
+                                <option value="37">山东省</option>
+                                <option value="41">河南省</option>
+                                <option value="42">湖北省</option>
+                                <option value="43">湖南省</option>
+                                <option value="44">广东省</option>
+                                <option value="45">广西壮族自治区</option>
+                                <option value="46">海南省</option>
+                                <option value="50">重庆市</option>
+                                <option value="51">四川省</option>
+                                <option value="52">贵州省</option>
+                                <option value="53">云南省</option>
+                                <option value="54">西藏自治区</option>
+                                <option value="61">陕西省</option>
+                                <option value="62">甘肃省</option>
+                                <option value="63">青海省</option>
+                                <option value="64">宁夏回族自治区</option>
+                                <option value="65">新疆维吾尔自治区</option>
+                                <option value="71">新疆兵团</option>
+                                <option value="72">黑龙江省农垦总局</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12 xiugai_1">生产经营者名称</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                            <input name="orgID" id="orgID" value="edd45816-cda2-4f9f-9005-af39de8656a4" type="hidden">
+                            <input name="enterPriseName" id="enterPriseName" value="ddd" maxlength="50" class="form-control xxx" type="text">
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12 xiugai_1">生产许可证编号</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                            <input name="licenceNO" id="licenceNO" value="2222" maxlength="500" class="form-control xxx" type="text">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">昵称</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                            <input name="nickName" id="nickName" value="测试" maxlength="20" class="form-control xxx" type="text">
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12 xiugai_1">统一社会信用代码</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                            <input name="unifiedSocietyCreditCode" id="unifiedSocietyCreditCode" maxlength="50" class="form-control xxx" type="text">
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">联系人</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                            <input name="contactPerson" id="contactPerson" class="form-control xxx" type="text">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">联系人电话</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                            <input name="contactPerson" id="contactzuoji" class="form-control xxx" type="text">
+
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">联系人手机</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                <input name="contacttel" id="contacttel" maxlength="11" class="form-control xxx" type="text" onblur="(function(){
+                    if(!(/^1(3|4|5|7|8)\d{9}$/.test(document.getElementById('contacttel').value)))
+         {document.getElementById('contacttel').value='';
+            $(document.getElementById('contacttel')).attr('placeholder','号码有误，重新输入');}})()"/></div>
+                    </div>
+                    <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">联系人邮箱</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                            <input name="contactmail" id="contactmail"  class="form-control xxx" type="text">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">企业电话</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                            <input name="entertel" id="entertel"  class="form-control xxx" type="text">
+
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">企业传真</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                            <input name="enterfax" id="enterfax"  class="form-control xxx" type="text">
+
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">企业地址</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                            <input name="enterposition" id="enterposition"  class="form-control xxx" type="text">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">企业网站</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                            <input name="enterweb" id="enterweb"  class="form-control xxx" type="text">
+
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">企业微信号</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                            <input name="enterweixin" id="enterweixin" class="form-control xxx" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class=" col-sm-12 col-xs-12 form-group xiugai_8">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12 xiugai_9">企业Logo</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12 kv-main">
+                           <div class="container_crop">
+                              <div class="imageBox hide">
+                                <div class="thumbBox"></div>
+                                <div class="spinner" style="display: none">Loading...</div>
+                                <input type="button" id="btnZoomIn" class="Btnsty_peyton" value="+" style="width: 28px;position:absolute;bottom:30px;right:0;border:0;outline:none;">
+                                <input type="button" id="btnZoomOut" class="Btnsty_peyton" value="-" style="width: 28px;position:absolute;bottom:0;right:0;border:0;outline:none;">
+                              </div>
+                              <div class="action"> 
+                              <button id='btnRemove'  type="button" tabindex="500" title="Clear selected files" class="btn btn-default fileinput-remove fileinput-remove-button hide" style="float:left;margin-right:3px;margin-top:3px;"><i class="glyphicon glyphicon-trash"></i>  <span class="hidden-xs">删除</span></button>
+                              <a id='btnUpLoad' href="#" tabindex="500" title="Upload selected files" class="btn btn-default fileinput-upload fileinput-upload-button hide" style="float:left;margin-right:3px;margin-top:3px;"><i class="glyphicon glyphicon-upload "></i>  <span class="hidden-xs">上传</span></a>
+                                <div class="new-contentarea tc"> <a href="javascript:void(0)" class="upload-img">
+                                  <label for="choiceImg"><i class="glyphicon glyphicon-folder-open" style="margin-right:10px;"></i>选择图片</label>
+                                  </a>
+                                  <input type="file" class="" name="upload" id="choiceImg" />
+                                </div>
+
+                              </div>
+                              <div class="cropped"></div>                                      
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-sm-12 col-xs-12 form-group xiugai_7">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12 xiugai_6">企业简介</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12 dingwei">
+                            <richtextQYJJ></richtextQYJJ> 
+                        </div>
+                    </div>
+                </div>                          
+                <div class="row">
+                    <div class="col-md-4 col-sm-12 col-xs-12 form-group xiugai_7">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12  xiugai_6">企业照片</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12   kv-main  ">
+                            <fileinputQYZP></fileinputQYZP>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-sm-12 col-xs-12 form-group xiugai_7">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12 xiugai_6">企业资质</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12   kv-main  ">
+                            <fileinputQYZZ></fileinputQYZZ>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+                        <button type="submit" class="btn btn-primary">修改</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ 

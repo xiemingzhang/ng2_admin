@@ -1,0 +1,108 @@
+
+<div class="x_content">
+        <div class="row">                     
+            <div class="col-md-3 col-sm-12 col-xs-12 form-group">
+                <label class="col-xs-4  label-control">Rows on page</label>
+                 <select class="col-xs-4  form-control input-sm" [(ngModel)]="rowsOnPage">
+                    <option [ngValue]="5" >5</option>
+                    <option [ngValue]="10" >10</option>
+                    <option [ngValue]="20" >20</option>
+                    <option [ngValue]="50" >50</option>
+                </select>                      
+            </div>
+            <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+               <label class="col-xs-4 label-control">Filter by name</label>
+                <div class="col-xs-8">
+                 <input class="form-control" [(ngModel)]="filterQuery"/>
+               </div>
+            </div>
+            <div class="col-md-5 col-sm-12 col-xs-12 form-group">
+                <label class="col-xs-2 label-control">Sort by</label>
+                <div class="col-xs-4">
+                    <div class="row">
+                        <select class="form-control" [(ngModel)]="sortBy">
+                            <option ngValue="approyear">approyear</option>
+                            <option [ngValue]="id">id</option>
+                            <option [ngValue]="sortByNameLength">name</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="row">
+                        <select class="form-control" [(ngModel)]="sortOrder">
+                            <option ngValue="asc">Ascending</option>
+                            <option ngValue="desc">Descending</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>                 
+     
+</div>
+<div class="clearfix"></div>
+<div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_content">
+                <table  class="table table-striped responsive-utilities jambo_table bulk_action" [mfData]="data | dataFilter : filterQuery" #mf="mfDataTable" [mfRowsOnPage]="rowsOnPage" [(mfSortBy)]="sortBy" [(mfSortOrder)]="sortOrder">
+                    <thead>
+                        <!-- <tr class="headings">  
+                            <th>序号 </th>                                       
+                            <th><mfDefaultSorter by="type" ><span style="color:white;">作物种类</span></mfDefaultSorter> </th>
+                            <th><mfDefaultSorter by="name"><span style="color:white;">品种名称</span></mfDefaultSorter> </th>
+                            <th><mfDefaultSorter by="clz"><span style="color:white;">种子类别</span></mfDefaultSorter> </th>
+                            <th><mfDefaultSorter by="org"><span style="color:white;">种子生产经营者名称</span></mfDefaultSorter> </th>
+                            <th><mfDefaultSorter by="licnum"><span style="color:white;">种子生产经营许可证编号</span></mfDefaultSorter> </th>
+                            <th><mfDefaultSorter by="startyear"><span style="color:white;">起始年份</span></mfDefaultSorter> </th>
+                            <th><mfDefaultSorter by="endyear"><span style="color:white;">结束年份</span></mfDefaultSorter> </th>
+                            <th><mfDefaultSorter by="quailty"><span style="color:white;">质量指标</span></mfDefaultSorter> </th>
+                            <th><mfDefaultSorter by="netwt"><span style="color:white;">净含量</span></mfDefaultSorter> </th>
+                            <th><mfDefaultSorter by="appronum"><span style="color:white;">审定编号</span></mfDefaultSorter> </th>
+                            <th><mfDefaultSorter by="approyear"><span style="color:white;">审定年份</span></mfDefaultSorter> </th>
+                            <th class=" no-link last"><span class="nobr">操作</span></th>
+                        </tr> -->
+                        <tr class="headings">  
+                            <th>序号 </th>                                       
+                            <th>作物种类</th>
+                            <th>品种名称</th>
+                            <th>种子类别</th>
+                            <th>种子生产经营者名称</th>
+                            <th>种子生产经营许可证编号</th>
+                            <th>起始年份</th>
+                            <th>结束年份</th>
+                            <th>质量指标</th>
+                            <th>净含量</th>
+                            <th>审定编号</th>
+                            <th>审定年份</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>                  
+                    <tbody>
+                        <tr class="even pointer" *ngFor="let item of mf.data;let i = index">
+                            <td class=" ">{{i+1}}</td>
+                            <td class=" ">{{item.type}}</td>
+                            <td class=" ">{{item.name}}</td>
+                            <td class=" ">{{item.clz}}</td>
+                            <td class=" ">{{item.org}}</td>
+                            <td class=" ">{{item.licnum}}</td>
+                            <td class=" ">{{item.startyear}}</td>
+                            <td class=" ">{{item.endyear}}</td>
+                            <td class=" ">{{item.quailty}}</td>
+                            <td class=" ">{{item.netwt}}</td>
+                            <td class=" ">{{item.appronum}}</td>
+                            <td class=" ">{{item.approyear}}</td>
+                            <td class=" " ><a   [routerLink]="['/chanpinxinxixiugai', item.id]">修改</a><a on-click="delete(item.id)">删除</a> </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <td colspan="13">
+                            <mfBootstrapPaginator [rowsOnPageSet]="[5,10,20,50]" (selected)="output($event)"></mfBootstrapPaginator>
+                        </td>
+                    </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
